@@ -3,6 +3,11 @@ This is assignment is all about learning.
 Which means, I will not care in the **slightest** about the speed of my progress or the result of my project.
 My sole focus will be understanding what I'm doing, aspiring to understand the SOLID principles as good as possible, and to soak my brain in the knowledge-juices of articles explaining SOLID.
 
+This README will be the main README.
+I will write down my learning experience down here.
+Every folder you can see in the repository, is for a separate principle of SOLID.
+So in every folder you can find their own README, where I explain what I changed about the code, and why I made those changes.
+
 ## Installing Typescript and Parcel
 For the first time ever, I can give a shout-out to Past-Besart!
 Past-Besart has used both Parcel and Typescript on a previous personal project.
@@ -23,24 +28,26 @@ And if my silly little words can help others, then that's something I can most d
 ## TO-(delie)-DO LIST
 - [x] Install Typescript
 - [x] Install Parcel
-- [ ] Learn more about the four pillars of OOP
+- [x] Learn more about the four pillars of OOP
   - I have been using the OOP principles for a while now, but ask me what the four pillars of OOP are and I'll start naming the names of the Elite Four in every Pokémon game.
   That's why I wanted to use this exercise as an opportunity to learn more about the four pillars of OOP.
   - [x] Ask Big Papa Google what the Four Pillars of OOP are
-  - [ ] Learn more about every pillar in depth
+  - [x] Learn more about every pillar in depth
     - [x] Abstraction
-    - [ ] Encapsulation
-    - [ ] Inheritance
-    - [ ] Polymorphism
+    - [x] Encapsulation
+    - [x] Inheritance
+    - [x] Polymorphism
     - If you can add an example, do it!
 - [ ] SOLID - S(nake) 
-  - [ ] Read all information given to us by the coaches regarding the S of SOLID.
-  - [ ] Add S of SOLID part in README
-    - [ ] Write everything I've learned from the sources given to us by BeCode about the S
+  - [x] Read all information given to us by the coaches regarding the S of SOLID.
+  - [x] Add S of SOLID part in README
+    - [x] Write everything I've learned from the sources given to us by BeCode about the S
     - Try to use my own words, describe it as simple as possible, and don't be afraid to make mistakes in my own explanation.
-  - [ ] Do some investigating of my own
-    - [ ] Add those resources to README
-    - [ ] Write out new insights I've gained from other resources
+  - [x] Do some investigating of my own
+    - [x] Add those resources to README
+    - [x] Write out new insights I've gained from other resources
+  - [ ] Work on the S assignment
+    - [ ] Write in that README about how I tackled that assignment
 - [ ] Add funny title for when I'm at the L in SOLID
   - [ ] The L in Solid: The first L I've taken in my entire life
 
@@ -135,10 +142,68 @@ I'm not much of a theory kinda guy, so when I learn something, I better learn it
 
 With the Four Pillars of OOP out of the way and inserted into my brain, I will now move on to learning the SOLID principles.
 
-## S - Single Responsibility Principle
+## SRP - Spicy Rules (are) Present
+SRP, or the Single Responsibility Principle has one single rule you must absolutely abide by.
+**"Classes should have a single responsibility and thus only a single reason to change."**
+
+So in other words, everything needs a single reason to exist.
+Everything has a "Single Responsibility".
+You can't have a 'CorporateBusiness' class that can 'doMarketing', 'doHR', and 'whipDevelopersInWorkingShape'.
+Because if you do, then the 'CorporateBusiness' becomes a God Object, and that's a big no-no.
+
+If your class can do literally everything, that means everything is connected to each other.
+If you change something in the 'doHR', then the 'doMarketing' might stop working properly.
+So, these functions need to be a part of separate classes.
+The 'doMarketing' function becomes a function in the 'MarketingDepartment' class.
+
+If the words and the example don't make you understand it properly, I will add an example below.
+Personally, examples make me understand stuff 100000000000% faster.
+
+The following example is made ignoring the Single Responsibility Principle.
+````
+class CorporateBusiness {
+
+    public doMarketing () {
+        //code that does marketing
+    }
+
+    public doHR () {
+        //code that does HR
+    }
+
+    public whipDevelopersInWorkingShape () {
+        //code that does development
+    }
+}
+````
+
+And the following example is made by adhering to the Single Responsibility Principle.
+````
+class MarketingDepartment {
+    public doMarketing () {
+        //code that does marketing
+    }
+}
+class HRDepartment {
+    public doHR () {
+        //code that does HR
+    }
+}
+class WebDevDepartment {
+    public whipDevelopersInWorkingShape () {
+        //code that does development
+    }
+}
+````
+
+Everything is kept separate, it won't affect the other classes, and they can be called anywhere you need.
+
+
 
 ---
 
 ## Sources
 * Regarding OOP:
   * [This freecodecamp link](https://www.freecodecamp.org/news/four-pillars-of-object-oriented-programming/)
+* Rgarding SOLID:
+  * [Another freecodecamp link](https://www.freecodecamp.org/news/solid-principles-single-responsibility-principle-explained/)
