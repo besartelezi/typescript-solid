@@ -48,6 +48,7 @@ And if my silly little words can help others, then that's something I can most d
     - [x] Write out new insights I've gained from other resources
   - [ ] Work on the S assignment
     - [ ] Write in that README about how I tackled that assignment
+    - [ ] Comment code / explain what I did
 - [ ] Add funny title for when I'm at the L in SOLID
   - [ ] The L in Solid: The first L I've taken in my entire life
 
@@ -198,6 +199,8 @@ class WebDevDepartment {
 
 Everything is kept separate, it won't affect the other classes, and they can be called anywhere you need.
 
+But the issue with the example that I gave, is that I'm not sure what to do with the MarketingDepartment class now.
+So I will try and experiment a little in Typescript, while also searching online how other people have de-God'ed their God Objects.
 
 
 ---
