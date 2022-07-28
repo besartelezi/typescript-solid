@@ -1,3 +1,7 @@
+# The Assignment's Part of the README 
+
+---
+
 # Single responsibility principle
 
 ## Theory
@@ -15,3 +19,16 @@ Refactor the code, so we have at least a separate class for Car, Engine and Musi
 
 ### Extra challenge
 Make a new type of Engine that also consumes Fuel
+
+---
+
+# The COOL part of the README :sunglasses:
+
+## SRP - Opening The File
+The moment I opened the file, I received the biggest headache known to mankind.
+My very first thought was 'ah, now I get why the coaches at BeCode want us to learn this as good as possible'.
+Understanding someone else's code is always a hassle, but when they're not adhering to the SOLID principles makes it even harder.
+
+The very first problem I encountered was that, while I understood the theory, I had no idea how to apply it.
+I also understand that everything needs to be in separate classes, have their own responsibility.
+But how does that practically connect to main class, in this case, the 'Car' class.
