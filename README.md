@@ -50,9 +50,9 @@ And if my silly little words can help others, then that's something I can most d
     - [x] Write in that README about how I tackled that assignment
     - [x] Comment code / explain what I did
 - [ ] 'O' here comes trouble - Theory
-  - [ ] Read all information given to us by the coaches regarding the O of SOLID.
-  - [ ] Add O of SOLID part in README
-    - [ ] Write everything I've learned from the sources given to us by BeCode about the O
+  - [x] Read all information given to us by the coaches regarding the O of SOLID.
+  - [x] Add O of SOLID part in README
+    - [x] Write everything I've learned from the sources given to us by BeCode about the O
     - Try to use my own words, describe it as simple as possible, and don't be afraid to make mistakes in my own explanation.
   - [ ] Do some investigating of my own
     - [ ] Add those resources to README
@@ -202,8 +202,8 @@ So I'll abandon reading and just turn off my brain and learn from the mistakes.
 
 **TL;DR: Reading is for nerds, turning your brain off and making mistakes is the way to go (smashing your head against a wall until the wall breaks)**
 
-## SRP - Spicy Rules (are) Present
-SRP, or the Single Responsibility Principle has one single rule you must absolutely abide by.
+## SRP - Single Responsibility Principle
+SRP, or the Single Responsibility Principle (or the Spicy Rule is Present as one might say) has one single rule you must absolutely abide by.
 **"Classes should have a single responsibility and thus only a single reason to change."**
 
 So in other words, everything needs a single reason to exist.
@@ -261,8 +261,27 @@ Everything is kept separate, it won't affect the other classes, and they can be 
 But the issue with the example that I gave, is that I'm not sure what to do with the MarketingDepartment class now.
 So I will try and experiment a little in Typescript, while also searching online how other people have de-God'ed their God Objects.
 
+## OCP - Open Closed Principle
+The Open Closed Principle described in one sentence is "Open for extension, but closed for modification".
+This means that once you've written your code, you shouldn't modify it anymore.
+And if you want to implement new features or code, you can just add onto it, without modifying the old code.
 
-##
+To write code that implements this principle, you need to split up the code in two parts.
+The first part is the "open for extension" part of the code.
+You can add new behaviour and new code, without breaking the entire darn thing.
+The second part is the "closed for modification" part of the code.
+This code's design should **never** change once written.
+
+This basically means that you can always add new code, but never change the design of old code.
+Code becomes more clear this way, costs of modifying the code get decreased, and changing one part of the code won't result in changing code throughout the entire project.
+Time is of essence, so this principle will save developers a lot of time.
+
+It was also mentioned that ideal code should be written using the black box principle.
+Which according to me, is somehow similar to the Abstraction principle of OOP.
+The difficult code should be hidden behind a method or function, with a name simple name so the user knows roughly what the output of the code will be.
+
+
+![alt-text](images/patrick-spongebob.gif)
 
 ---
 
@@ -270,4 +289,7 @@ So I will try and experiment a little in Typescript, while also searching online
 * Regarding OOP:
   * [This freecodecamp link](https://www.freecodecamp.org/news/four-pillars-of-object-oriented-programming/)
 * Rgarding SOLID:
-  * [Another freecodecamp link](https://www.freecodecamp.org/news/solid-principles-single-responsibility-principle-explained/)
+  * [SRP](https://www.freecodecamp.org/news/solid-principles-single-responsibility-principle-explained/)
+  * [OCP](https://www.freecodecamp.org/news/solid-principles-explained-in-plain-english/)
+
+![freecodecamp](images/freecodecamp-meme.png)
