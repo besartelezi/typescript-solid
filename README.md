@@ -49,17 +49,17 @@ And if my silly little words can help others, then that's something I can most d
   - [x] Finish the S assignment
     - [x] Write in that README about how I tackled that assignment
     - [x] Comment code / explain what I did
-- [ ] 'O' here comes trouble - Theory
+- [x] 'O' here comes trouble - Theory
   - [x] Read all information given to us by the coaches regarding the O of SOLID.
   - [x] Add O of SOLID part in README
     - [x] Write everything I've learned from the sources given to us by BeCode about the O
     - Try to use my own words, describe it as simple as possible, and don't be afraid to make mistakes in my own explanation.
-  - [ ] Do some investigating of my own
-    - [ ] Add those resources to README
-    - [ ] Write out new insights I've gained from other resources
-  - [ ] Finish the O assignment
-    - [ ] Write in that README about how I tackled that assignment
-    - [ ] Comment code / explain what I did
+  - [x] Do some investigating of my own
+    - [x] Add those resources to README
+    - [x] Write out new insights I've gained from other resources
+  - [x] Finish the O assignment
+    - [x] Write in that README about how I tackled that assignment
+    - [x] Comment code / explain what I did
 - [ ] First 'L' I've ever taken - Theory
   - [ ] Read all information given to us by the coaches regarding the L of SOLID.
   - [ ] Add L of SOLID part in README
