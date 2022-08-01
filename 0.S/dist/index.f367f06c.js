@@ -142,14 +142,14 @@
       this[globalName] = mainExports;
     }
   }
-})({"1MmVi":[function(require,module,exports) {
+})({"fyNYn":[function(require,module,exports) {
 "use strict";
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
-module.bundle.HMR_BUNDLE_ID = "b4749d0c803680cd";
+module.bundle.HMR_BUNDLE_ID = "6677c6d5f367f06c";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, chrome, browser, globalThis, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
   HMRAsset,
@@ -531,15 +531,80 @@ function hmrAcceptRun(bundle, id) {
     acceptedAssets[id] = true;
 }
 
-},{}],"lxE4J":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-var MusicPlayer_1 = require("./MusicPlayer");
-var Engine_1 = require("./Engine");
-var Car_1 = require("./Car");
-console.log(new MusicPlayer_1.MusicPlayer());
+},{}],"5Z2FW":[function(require,module,exports) {
+var Car = /** @class */ function() {
+    function Car1(MAXIMUM_FUEL_CAPACITY) {
+        //it is convention to start property names in TypeScript with an underscore.
+        // If you want to known why, remove the underscore and see if your compiler is throwing you an error!
+        this._musicLevel = 0;
+        this._oldMusicLevel = 50;
+        this._fuel = 0;
+        this._miles = 0;
+        this._engineStatus = false;
+        this.FUEL_MILEAGE = 10;
+        this.MAXIMUM_FUEL_CAPACITY = MAXIMUM_FUEL_CAPACITY;
+    }
+    Object.defineProperty(Car1.prototype, "miles", {
+        get: function() {
+            return this._miles;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Car1.prototype, "musicLevel", {
+        //Take attention to these getter and setters
+        get: function() {
+            return this._musicLevel;
+        },
+        set: function(value) {
+            this._musicLevel = value;
+            this._oldMusicLevel = value;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Car1.prototype.turnMusicOn = function() {
+        this._musicLevel = this._oldMusicLevel;
+    };
+    Car1.prototype.turnMusicOff = function() {
+        this._musicLevel = 0;
+    };
+    Object.defineProperty(Car1.prototype, "fuel", {
+        get: function() {
+            return this._fuel;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    //When a value can only go one way (you add fuel, consuming fuel is handled by the car itself)
+    // it is better to provide a specific method for this instead of a generic setter.
+    // with a setter there is always the chance of somebody lowering the fuel amount by accident.
+    Car1.prototype.addFuel = function(fuel) {
+        this._fuel = Math.min(fuel + this._fuel, this.MAXIMUM_FUEL_CAPACITY);
+    };
+    Object.defineProperty(Car1.prototype, "engineStatus", {
+        get: function() {
+            return this._engineStatus;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Car1.prototype.turnEngineOn = function() {
+        this._engineStatus = true;
+    };
+    Car1.prototype.turnEngineOff = function() {
+        this._engineStatus = false;
+    };
+    Car1.prototype.drive = function() {
+        if (this.engineStatus === false || this._fuel <= 0) //what I am doing here is a good principle called "failing early"
+        // If you have some conditions you need to check, that will exclude most of the code in your function check that first
+        // This prevents your "happy path" of code to be deeply indented.
+        return;
+        this._fuel -= 1;
+        this._miles += this.FUEL_MILEAGE;
+    };
+    return Car1;
+}();
 // When you see <cast>variable this is a "cast" of a variable, explicitly telling the code what the type of this variable will be.
 // This is sometimes needed when a default JS function does not return a precise enough Type.
 // I need to cast this to HtmlElement because the default Element return type is not specific to the HTML context (because some versions of JS can also be used in the backend, see node.js)
@@ -552,38 +617,38 @@ var addFuelInput = document.querySelector("#add-fuel-input");
 var fuelLevelElement = document.querySelector("#fuel-level");
 var milesElement = document.querySelector("#miles-value");
 var audioElement = document.querySelector("#car-music");
-var car = new Car_1.Car(new MusicPlayer_1.MusicPlayer(), new Engine_1.Engine(10));
+var car = new Car(100);
 musicToggleElement.addEventListener("click", function() {
-    if (car.musicplayer.musicLevel === 0) {
-        car.musicplayer.turnMusicOn();
-        musicSliderElement.value = car.musicplayer.musicLevel.toString();
+    if (car.musicLevel === 0) {
+        car.turnMusicOn();
+        musicSliderElement.value = car.musicLevel.toString();
         musicToggleElement.innerText = "Turn music off";
         return;
     }
     musicToggleElement.innerText = "Turn music on";
-    car.musicplayer.turnMusicOff();
+    car.turnMusicOff();
 });
 //I use input instead of change, because then the value changes when I move the mouse, not only on release
 musicSliderElement.addEventListener("input", function(event) {
     var target = event.target;
-    car.musicplayer.musicLevel = target.value;
-    audioElement.volume = car.musicplayer.musicLevel / 100;
+    car.musicLevel = target.value;
+    audioElement.volume = car.musicLevel / 100;
     //@todo when you are repeating the same text over and over again maybe we should have made some constants for it? Can you do improve on this?
-    musicToggleElement.innerText = car.musicplayer.musicLevel ? "Turn music off" : "Turn music on";
+    musicToggleElement.innerText = car.musicLevel ? "Turn music off" : "Turn music on";
 });
 engineToggleElement.addEventListener("click", function() {
-    if (car.engine.engineStatus) {
-        car.engine.turnEngineOff();
+    if (car.engineStatus) {
+        car.turnEngineOff();
         engineToggleElement.innerText = "Turn engine on";
         return;
     }
     engineToggleElement.innerText = "Turn engine off";
-    car.engine.turnEngineOn();
+    car.turnEngineOn();
 });
 addFuelForm.addEventListener("submit", function(event) {
     event.preventDefault();
-    car.engine.addFuel(Number(addFuelInput.value));
-    fuelLevelElement.innerText = car.engine.fuel.toString();
+    car.addFuel(Number(addFuelInput.value));
+    fuelLevelElement.innerText = car.fuel.toString();
 });
 setInterval(function() {
     car.drive();
@@ -591,137 +656,11 @@ setInterval(function() {
     // this <cast> will only tell TypeScript that the value is a string, but the actual variable in JS is not changed in any way: it is in reality still a number
     milesElement.innerText = car.miles;
     // This .toString() will actually convert the value in JavaScript from an integer to a string
-    fuelLevelElement.innerText = car.engine.fuel.toString();
-    if (car.musicplayer.musicLevel === 0) audioElement.pause();
+    fuelLevelElement.innerText = car.fuel.toString();
+    if (car.musicLevel === 0) audioElement.pause();
     else audioElement.play();
 }, 1000);
 
-},{"./MusicPlayer":"enPJy","./Engine":"2gMw9","./Car":"c7HiM"}],"enPJy":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.MusicPlayer = void 0;
-var MusicPlayer = /** @class */ function() {
-    function MusicPlayer1() {
-        this._musicLevel = 0;
-        this._oldMusicLevel = 50;
-    }
-    Object.defineProperty(MusicPlayer1.prototype, "musicLevel", {
-        //Take attention to these getter and setters
-        get: function() {
-            return this._musicLevel;
-        },
-        set: function(value) {
-            this._musicLevel = value;
-            this._oldMusicLevel = value;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    MusicPlayer1.prototype.turnMusicOn = function() {
-        this._musicLevel = this._oldMusicLevel;
-    };
-    MusicPlayer1.prototype.turnMusicOff = function() {
-        this._musicLevel = 0;
-    };
-    return MusicPlayer1;
-}();
-exports.MusicPlayer = MusicPlayer;
+},{}]},["fyNYn","5Z2FW"], "5Z2FW", "parcelRequire94c2")
 
-},{}],"2gMw9":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.Engine = void 0;
-var Engine = /** @class */ function() {
-    function Engine1(MAXIMUM_FUEL_CAPACITY) {
-        this._fuel = 0;
-        this._engineStatus = false;
-        this.MAXIMUM_FUEL_CAPACITY = MAXIMUM_FUEL_CAPACITY;
-    }
-    Object.defineProperty(Engine1.prototype, "fuel", {
-        get: function() {
-            return this._fuel;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    //When a value can only go one way (you add fuel, consuming fuel is handled by the car itself)
-    // it is better to provide a specific method for this instead of a generic setter.
-    // with a setter there is always the chance of somebody lowering the fuel amount by accident.
-    Engine1.prototype.addFuel = function(fuel) {
-        this._fuel = Math.min(fuel + this._fuel, this.MAXIMUM_FUEL_CAPACITY);
-    };
-    Object.defineProperty(Engine1.prototype, "engineStatus", {
-        get: function() {
-            return this._engineStatus;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Engine1.prototype.turnEngineOn = function() {
-        this._engineStatus = true;
-    };
-    Engine1.prototype.turnEngineOff = function() {
-        this._engineStatus = false;
-    };
-    Engine1.prototype.useFuel = function() {
-        this._fuel -= 1;
-    };
-    return Engine1;
-}();
-exports.Engine = Engine;
-
-},{}],"c7HiM":[function(require,module,exports) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.Car = void 0;
-var Car = /** @class */ function() {
-    function Car1(_musicPlayer, _engine) {
-        this.FUEL_MILEAGE = 10;
-        this._miles = 0;
-        this._musicPlayer = _musicPlayer;
-        this._engine = _engine;
-    }
-    Object.defineProperty(Car1.prototype, "miles", {
-        get: function() {
-            return this._miles;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(Car1.prototype, "engine", {
-        get: function() {
-            return this._engine;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(Car1.prototype, "musicplayer", {
-        get: function() {
-            return this._musicPlayer;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Car1.prototype.drive = function() {
-        if (this._engine.engineStatus === false || this._engine.fuel <= 0) //what I am doing here is a good principle called "failing early"
-        // If you have some conditions you need to check, that will exclude most of the code in your function check that first
-        // This prevents your "happy path" of code to be deeply indented.
-        return;
-        //removes fuel from engine
-        this._engine.useFuel();
-        //FUEL_MILEAGE needs to increase
-        this._miles += this.FUEL_MILEAGE;
-    };
-    return Car1;
-}();
-exports.Car = Car;
-
-},{}]},["1MmVi","lxE4J"], "lxE4J", "parcelRequire94c2")
-
-//# sourceMappingURL=index.803680cd.js.map
+//# sourceMappingURL=index.f367f06c.js.map
