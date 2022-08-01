@@ -46,6 +46,9 @@ And if my silly little words can help others, then that's something I can most d
   - [x] Do some investigating of my own
     - [x] Add those resources to README
     - [x] Write out new insights I've gained from other resources
+  - [x] Finish the S assignment
+    - [x] Write in that README about how I tackled that assignment
+    - [x] Comment code / explain what I did
 - [ ] 'O' here comes trouble - Theory
   - [ ] Read all information given to us by the coaches regarding the O of SOLID.
   - [ ] Add O of SOLID part in README
@@ -54,6 +57,9 @@ And if my silly little words can help others, then that's something I can most d
   - [ ] Do some investigating of my own
     - [ ] Add those resources to README
     - [ ] Write out new insights I've gained from other resources
+  - [ ] Finish the O assignment
+    - [ ] Write in that README about how I tackled that assignment
+    - [ ] Comment code / explain what I did
 - [ ] First 'L' I've ever taken - Theory
   - [ ] Read all information given to us by the coaches regarding the L of SOLID.
   - [ ] Add L of SOLID part in README
@@ -62,6 +68,9 @@ And if my silly little words can help others, then that's something I can most d
   - [ ] Do some investigating of my own
     - [ ] Add those resources to README
     - [ ] Write out new insights I've gained from other resources
+  - [ ] Finish the L assignment
+    - [ ] Write in that README about how I tackled that assignment
+    - [ ] Comment code / explain what I did
 - [ ] 'I' can't believe you've done this - Theory
   - [ ] Read all information given to us by the coaches regarding the S of SOLID.
   - [ ] Add S of SOLID part in README
@@ -70,6 +79,9 @@ And if my silly little words can help others, then that's something I can most d
   - [ ] Do some investigating of my own
     - [ ] Add those resources to README
     - [ ] Write out new insights I've gained from other resources
+  - [ ] Finish the I assignment
+    - [ ] Write in that README about how I tackled that assignment
+    - [ ] Comment code / explain what I did
 - [ ] 'D'amn that boy can code! - Theory
   - [ ] Read all information given to us by the coaches regarding the D of SOLID.
   - [ ] Add D of SOLID part in README
@@ -78,9 +90,9 @@ And if my silly little words can help others, then that's something I can most d
   - [ ] Do some investigating of my own
     - [ ] Add those resources to README
     - [ ] Write out new insights I've gained from other resources
-- [ ] Work on the S assignment
-  - [ ] Write in that README about how I tackled that assignment
-  - [ ] Comment code / explain what I did
+  - [ ] Finish the D assignment
+    - [ ] Write in that README about how I tackled that assignment
+    - [ ] Comment code / explain what I did
 
 ---
 
