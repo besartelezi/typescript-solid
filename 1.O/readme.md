@@ -32,3 +32,14 @@ Now add another animal (you can choose your favorite animal), and make sure it m
 Did you notice you needed to alter the Zoo object even when all you did was add a new Animal class? Would it not be much better to move the `makeSound` function to each Animal class, so each animal can decide for himself what sound he makes instead of the Zoo class?
 
 Create a `makeSound` function to each Animal class and remove the giant switch from the Zoo class. Now you can easily add new animals without altering an existing class!
+
+---
+
+# The COOL part of the README :sunglasses:
+
+## OCP
+I started out by creating separate files for all the classes.
+Then, I added a new class called Gorilla, because I love gorillas.
+After that, I changed one single word in the code of the new.ts file, added a Gorilla object, and everything worked perfectly!
+
+Now I can add as many animals as I want, without messing up the pre-existing code!
