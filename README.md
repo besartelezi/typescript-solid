@@ -38,7 +38,7 @@ And if my silly little words can help others, then that's something I can most d
     - [x] Inheritance
     - [x] Polymorphism
     - If you can add an example, do it!
-- [ ] SOLID - S(nake) 
+- [x] SOLID S(nake) - Theory 
   - [x] Read all information given to us by the coaches regarding the S of SOLID.
   - [x] Add S of SOLID part in README
     - [x] Write everything I've learned from the sources given to us by BeCode about the S
@@ -46,11 +46,41 @@ And if my silly little words can help others, then that's something I can most d
   - [x] Do some investigating of my own
     - [x] Add those resources to README
     - [x] Write out new insights I've gained from other resources
-  - [ ] Work on the S assignment
-    - [ ] Write in that README about how I tackled that assignment
-    - [ ] Comment code / explain what I did
-- [ ] Add funny title for when I'm at the L in SOLID
-  - [ ] The L in Solid: The first L I've taken in my entire life
+- [ ] 'O' here comes trouble - Theory
+  - [ ] Read all information given to us by the coaches regarding the O of SOLID.
+  - [ ] Add O of SOLID part in README
+    - [ ] Write everything I've learned from the sources given to us by BeCode about the O
+    - Try to use my own words, describe it as simple as possible, and don't be afraid to make mistakes in my own explanation.
+  - [ ] Do some investigating of my own
+    - [ ] Add those resources to README
+    - [ ] Write out new insights I've gained from other resources
+- [ ] First 'L' I've ever taken - Theory
+  - [ ] Read all information given to us by the coaches regarding the L of SOLID.
+  - [ ] Add L of SOLID part in README
+    - [ ] Write everything I've learned from the sources given to us by BeCode about the L
+    - Try to use my own words, describe it as simple as possible, and don't be afraid to make mistakes in my own explanation.
+  - [ ] Do some investigating of my own
+    - [ ] Add those resources to README
+    - [ ] Write out new insights I've gained from other resources
+- [ ] 'I' can't believe you've done this - Theory
+  - [ ] Read all information given to us by the coaches regarding the S of SOLID.
+  - [ ] Add S of SOLID part in README
+    - [ ] Write everything I've learned from the sources given to us by BeCode about the S
+    - Try to use my own words, describe it as simple as possible, and don't be afraid to make mistakes in my own explanation.
+  - [ ] Do some investigating of my own
+    - [ ] Add those resources to README
+    - [ ] Write out new insights I've gained from other resources
+- [ ] 'D'amn that boy can code! - Theory
+  - [ ] Read all information given to us by the coaches regarding the D of SOLID.
+  - [ ] Add D of SOLID part in README
+    - [ ] Write everything I've learned from the sources given to us by BeCode about the D
+    - Try to use my own words, describe it as simple as possible, and don't be afraid to make mistakes in my own explanation.
+  - [ ] Do some investigating of my own
+    - [ ] Add those resources to README
+    - [ ] Write out new insights I've gained from other resources
+- [ ] Work on the S assignment
+  - [ ] Write in that README about how I tackled that assignment
+  - [ ] Comment code / explain what I did
 
 ---
 
@@ -58,6 +88,7 @@ And if my silly little words can help others, then that's something I can most d
 The Four Pillars are some design rules that you need to follow in order to write clean code.
 Being able to write clean code is sometimes not even a 'nice-to-have', but a bare minimum requirement.
 Clean code => Easy to understand => Easy to implement/Easy to change => Happy employers => Winner winner caviar for dinner.
+I wanted to learn more about the Four Pillars of OOP for multiple reasons, but the most important reason is that I think it will help me understand the SOLID principles better.
 
 The four pillars are: **abstraction, encapsulation, inheritance, and polymorphism.**
 I will now explain these four pillars as best as I can!
@@ -143,6 +174,22 @@ I'm not much of a theory kinda guy, so when I learn something, I better learn it
 
 With the Four Pillars of OOP out of the way and inserted into my brain, I will now move on to learning the SOLID principles.
 
+## Change of plans
+After staring at my screen for way too long, not being able to actually put the theory of the Single Responsibility Principle into practice, I decided to switch things up a bit.
+Now I will learn all the principles, try to understand them, research them, write them down, whatever it takes for them to not escape the inner workings of my mind.
+
+I think switching things up is the right thing to do.
+No matter how hard I break my head around it, I just can't comprehend (for now) how the classes and their functions work together with other classes and functions.
+Refactoring code is also something that's not going too smoothly right now.
+My brain just needs to freshen itself up a bit, and focus on something that's a bit more do-able.
+And who knows, maybe I can figure out the solution to my problem through the other steps of the SOLID principles.
+
+## Plans have changed once again
+I think I was too much in my own head, second-guessing everything and doing nothing won't help me.
+So I'll abandon reading and just turn off my brain and learn from the mistakes.
+
+**TL;DR: Reading is for nerds, turning your brain off and making mistakes is the way to go (smashing your head against a wall until the wall breaks)**
+
 ## SRP - Spicy Rules (are) Present
 SRP, or the Single Responsibility Principle has one single rule you must absolutely abide by.
 **"Classes should have a single responsibility and thus only a single reason to change."**
@@ -202,6 +249,8 @@ Everything is kept separate, it won't affect the other classes, and they can be 
 But the issue with the example that I gave, is that I'm not sure what to do with the MarketingDepartment class now.
 So I will try and experiment a little in Typescript, while also searching online how other people have de-God'ed their God Objects.
 
+
+##
 
 ---
 

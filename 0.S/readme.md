@@ -32,3 +32,22 @@ Understanding someone else's code is always a hassle, but when they're not adher
 The very first problem I encountered was that, while I understood the theory, I had no idea how to apply it.
 I also understand that everything needs to be in separate classes, have their own responsibility.
 But how does that practically connect to main class, in this case, the 'Car' class.
+
+## SRP - Some Real Problems
+The hardest part of this assignment was just getting started.
+The theory wasn't all that complicated, but it can get very deep.
+I knew I had to create three different classes, a Car class, a MusicPlayer class and an Engine class.
+Then, pick out everything that was in the Car class and put the code in either the MusicPlayer class or the Engine class, depending on what the code did.
+Afterwards, I had to add the MusicPlayer and Engine class as a property to the Car class.
+
+These steps all made sense to me, but I was lost as to how to go further with the assignment.
+So I decided to read some more and hope I'll figure it out.
+And honestly, that was a huge mistake.
+I just lost a lot of time repeating the theory I already understood without putting it into practice.
+When I decided to turn my brain off and just start coding, I finally understood the S of Solid a **lot** better.
+
+When I added the classes as properties to the Car class, it was for the following purpose.
+When creating a new Car object, you need to define the properties.
+And these properties, that get passed through the constructor, were the newly constructed MusicPlayer and Engine objects.
+Then when refactoring the code, I just had to add a 'musicplayer' or an 'engine' in between of the car object and the methods.
+All in all, a job well done!
