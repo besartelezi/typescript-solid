@@ -38,7 +38,7 @@ And if my silly little words can help others, then that's something I can most d
     - [x] Inheritance
     - [x] Polymorphism
     - If you can add an example, do it!
-- [x] SOLID S(nake) - Theory 
+- [x] SOLID S(nake) 
   - [x] Read all information given to us by the coaches regarding the S of SOLID.
   - [x] Add S of SOLID part in README
     - [x] Write everything I've learned from the sources given to us by BeCode about the S
@@ -49,7 +49,7 @@ And if my silly little words can help others, then that's something I can most d
   - [x] Finish the S assignment
     - [x] Write in that README about how I tackled that assignment
     - [x] Comment code / explain what I did
-- [x] 'O' here comes trouble - Theory
+- [x] 'O' here comes trouble
   - [x] Read all information given to us by the coaches regarding the O of SOLID.
   - [x] Add O of SOLID part in README
     - [x] Write everything I've learned from the sources given to us by BeCode about the O
@@ -60,7 +60,7 @@ And if my silly little words can help others, then that's something I can most d
   - [x] Finish the O assignment
     - [x] Write in that README about how I tackled that assignment
     - [x] Comment code / explain what I did
-- [ ] First 'L' I've ever taken - Theory
+- [ ] First 'L' I've ever taken
   - [X] Read all information given to us by the coaches regarding the L of SOLID.
   - [X] Add L of SOLID part in README
     - [X] Write everything I've learned from the sources given to us by BeCode about the L
@@ -68,10 +68,10 @@ And if my silly little words can help others, then that's something I can most d
   - [X] Do some investigating of my own
     - [X] Add those resources to README
     - [X] Write out new insights I've gained from other resources
-  - [ ] Finish the L assignment
-    - [ ] Write in that README about how I tackled that assignment
-    - [ ] Comment code / explain what I did
-- [ ] 'I' can't believe you've done this - Theory
+  - [x] Finish the L assignment
+    - [x] Write in that README about how I tackled that assignment
+    - [x] Comment code / explain what I did
+- [ ] 'I' can't believe you've done this
   - [ ] Read all information given to us by the coaches regarding the S of SOLID.
   - [ ] Add S of SOLID part in README
     - [ ] Write everything I've learned from the sources given to us by BeCode about the S
@@ -82,7 +82,7 @@ And if my silly little words can help others, then that's something I can most d
   - [ ] Finish the I assignment
     - [ ] Write in that README about how I tackled that assignment
     - [ ] Comment code / explain what I did
-- [ ] 'D'amn that boy can code! - Theory
+- [ ] 'D'amn that boy can code!
   - [ ] Read all information given to us by the coaches regarding the D of SOLID.
   - [ ] Add D of SOLID part in README
     - [ ] Write everything I've learned from the sources given to us by BeCode about the D
@@ -211,6 +211,7 @@ Everything has a "Single Responsibility".
 You can't have a 'CorporateBusiness' class that can 'doMarketing', 'doHR', and 'whipDevelopersInWorkingShape'.
 Because if you do, then the 'CorporateBusiness' becomes a God Object, and that's a big no-no.
 
+### Example Time
 If your class can do literally everything, that means everything is connected to each other.
 If you change something in the 'doHR', then the 'doMarketing' might stop working properly.
 So, these functions need to be a part of separate classes.
@@ -240,32 +241,47 @@ class CorporateBusiness {
 And the following example is made by adhering to the Single Responsibility Principle.
 ````
 class MarketingDepartment {
-    public doMarketing () {
+    private doMarketing () {
         //code that does marketing
     }
 }
 class HRDepartment {
-    public doHR () {
+    private doHR () {
         //code that does HR
     }
 }
 class WebDevDepartment {
-    public whipDevelopersInWorkingShape () {
+    private whipDevelopersInWorkingShape () {
         //code that does development
     }
 }
+
+class CorporateBusiness {
+
+    //adding other classes as properties of this class
+    private _marektingDepartment : MarketingDepartment;
+    private _hrDepartment : HRDepartment;
+    private _webDevDepartment : WebDevDepartment;
+
+    constructor(_marektingDepartment : MarketingDepartment, _hrDepartment : HRDepartment,_webDevDepartment : WebDevDepartment) {
+        this._marektingDepartment = _marektingDepartment;
+        this._hrDepartment = _hrDepartment;
+        this._webDevDepartment = _webDevDepartment;
+    }
+}
+
+
 ````
 
 Everything is kept separate, it won't affect the other classes, and they can be called anywhere you need.
-
-But the issue with the example that I gave, is that I'm not sure what to do with the MarketingDepartment class now.
-So I will try and experiment a little in Typescript, while also searching online how other people have de-God'ed their God Objects.
+Adding the newly added classes as properties to the CorporateBusiness class, makes it so that when you create a new CorporateBusiness object, you also create new objects of the newly added properties!
 
 ## OCP - Open Closed Principle
 The Open Closed Principle described in one sentence is "Open for extension, but closed for modification".
 This means that once you've written your code, you shouldn't modify it anymore.
 And if you want to implement new features or code, you can just add onto it, without modifying the old code.
 
+### How to OCP
 To write code that implements this principle, you need to split up the code in two parts.
 The first part is the "open for extension" part of the code.
 You can add new behaviour and new code, without breaking the entire darn thing.
@@ -276,10 +292,10 @@ This basically means that you can always add new code, but never change the desi
 Code becomes more clear this way, costs of modifying the code get decreased, and changing one part of the code won't result in changing code throughout the entire project.
 Time is of essence, so this principle will save developers a lot of time.
 
+### Black Box
 It was also mentioned that ideal code should be written using the black box principle.
 Which according to me, is somehow similar to the Abstraction principle of OOP.
 The difficult code should be hidden behind a method or function, with a name simple name so the user knows roughly what the output of the code will be.
-
 
 ![alt-text](images/patrick-spongebob.gif)
 
@@ -287,6 +303,7 @@ The difficult code should be hidden behind a method or function, with a name sim
 This principle can once again be summarized in one sentence: "Objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program."
 Now to explain this with an example.
 
+### Example Time
 Say we have a parent class called 'HomerSimpson' and it has a child class called 'BartSimpson'.
 Then we have a method that expects a HomerSimpson object as it's input.
 According to the LSP, we should be able to swap that HomerSimpson object for a BartSimpson object, without the code breaking or doing something weird.
@@ -294,9 +311,15 @@ According to the LSP, we should be able to swap that HomerSimpson object for a B
 And in order to adhere to the LSP, the parent class needs to have properties that are relevant to the child class.
 If the parent has a property the child won't use, well, then you done messed up A-ARON!!
 
+### Memexplanation
 I've also made a meme that might explain the LSP to people who can only soak up knowledge through memes (people like myself).
 
 ![liskov-meme](images/liskov.png)
+
+### Interface
+Multiple different classes can use the same interface, this is a form of polymorphism.
+Interfaces are public, don't have properties and are made out of methods.
+The methods in the interface itself are what's going to be used by the different classes.
 
 ---
 
@@ -306,5 +329,6 @@ I've also made a meme that might explain the LSP to people who can only soak up 
 * Rgarding SOLID:
   * [Entirety of SOLID, with a focus on SRP](https://www.freecodecamp.org/news/solid-principles-single-responsibility-principle-explained/)
   * [Entirety of SOLID](https://www.freecodecamp.org/news/solid-principles-explained-in-plain-english/)
+  * [Interfaces](https://www.w3schools.com/php/php_oop_interfaces.asp)
 
 ![freecodecamp](images/freecodecamp-meme.png)
