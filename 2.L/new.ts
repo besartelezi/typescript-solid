@@ -1,8 +1,14 @@
+import {Product} from "./classes/Product";
+import {shoppingBasket} from "./classes/shoppingBasket";
+import {VariableDiscount} from "./classes/VariableDiscount";
+import {FixedDiscount} from "./classes/FixedDiscount";
+import {NoDiscount} from "./classes/NoDiscount";
+import {Discount} from "./classes/Discount";
+
 let cart = new shoppingBasket();
-cart.addProduct(new Product('Chair', 25, new Discount("fixed", 10)));
-//cart.addProduct(new Product('Chair', 25, new Discount("fixed", -10)));
-cart.addProduct(new Product('Table', 50, new Discount("variable", 25)));
-cart.addProduct(new Product('Bed', 100, new Discount("none")));
+cart.addProduct(new Product('Chair', 25, new Discount(10)));
+cart.addProduct(new Product('Table', 50, new Discount(25)));
+cart.addProduct(new Product('Bed', 100, new Discount(0)));
 
 const tableElement = document.querySelector('#cart tbody');
 cart.products.forEach((product) => {

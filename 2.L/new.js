@@ -1,8 +1,12 @@
-var cart = new shoppingBasket();
-cart.addProduct(new Product('Chair', 25, new Discount("fixed", 10)));
-//cart.addProduct(new Product('Chair', 25, new Discount("fixed", -10)));
-cart.addProduct(new Product('Table', 50, new Discount("variable", 25)));
-cart.addProduct(new Product('Bed', 100, new Discount("none")));
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var Product_1 = require("./classes/Product");
+var shoppingBasket_1 = require("./classes/shoppingBasket");
+var Discount_1 = require("./classes/Discount");
+var cart = new shoppingBasket_1.shoppingBasket();
+cart.addProduct(new Product_1.Product('Chair', 25, new Discount_1.Discount(10)));
+cart.addProduct(new Product_1.Product('Table', 50, new Discount_1.Discount(25)));
+cart.addProduct(new Product_1.Product('Bed', 100, new Discount_1.Discount(0)));
 var tableElement = document.querySelector('#cart tbody');
 cart.products.forEach(function (product) {
     var tr = document.createElement('tr');
