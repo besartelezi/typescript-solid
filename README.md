@@ -321,6 +321,15 @@ Multiple different classes can use the same interface, this is a form of polymor
 Interfaces are public, don't have properties and are made out of methods.
 The methods in the interface itself are what's going to be used by the different classes.
 
+## ISP - Interface Segregation Principle
+The ISP is kind of the same as the LSP, but not quite...
+
+![same-same-but-different](images/same-same.gif)
+
+What's similar is that one interface shouldn't have methods that all classes can use, because this will result in some classes having unnecessary code.
+To fix this is where the ISP comes in!
+Interfaces need to only have the relevant methods.
+
 ---
 
 ## Sources
