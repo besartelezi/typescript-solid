@@ -1,6 +1,5 @@
 import {Discount} from "./Discount";
-import {InterfaceDiscount} from "./InterfaceDiscount";
-export class NoDiscount extends Discount implements InterfaceDiscount{
+export class NoDiscount extends Discount{
     constructor(protected _value : number) {
         super(_value)
     }

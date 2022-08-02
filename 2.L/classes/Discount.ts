@@ -1,4 +1,5 @@
-export class Discount {
+import {InterfaceDiscount} from "./InterfaceDiscount";
+export class Discount implements InterfaceDiscount{
     protected _value : number
 
     constructor(_value : number = 0) {
