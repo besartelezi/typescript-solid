@@ -1,3 +1,6 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.shoppingBasket = void 0;
 var shoppingBasket = /** @class */ (function () {
     function shoppingBasket() {
         //this array only accepts Product objects, nothing else
@@ -15,3 +18,4 @@ var shoppingBasket = /** @class */ (function () {
     };
     return shoppingBasket;
 }());
+exports.shoppingBasket = shoppingBasket;

@@ -1,3 +1,6 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Product = void 0;
 var Product = /** @class */ (function () {
     function Product(name, price, discount) {
         this._name = name;
@@ -35,3 +38,4 @@ var Product = /** @class */ (function () {
     };
     return Product;
 }());
+exports.Product = Product;
