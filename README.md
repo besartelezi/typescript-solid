@@ -61,13 +61,13 @@ And if my silly little words can help others, then that's something I can most d
     - [x] Write in that README about how I tackled that assignment
     - [x] Comment code / explain what I did
 - [ ] First 'L' I've ever taken - Theory
-  - [ ] Read all information given to us by the coaches regarding the L of SOLID.
-  - [ ] Add L of SOLID part in README
-    - [ ] Write everything I've learned from the sources given to us by BeCode about the L
+  - [X] Read all information given to us by the coaches regarding the L of SOLID.
+  - [X] Add L of SOLID part in README
+    - [X] Write everything I've learned from the sources given to us by BeCode about the L
     - Try to use my own words, describe it as simple as possible, and don't be afraid to make mistakes in my own explanation.
-  - [ ] Do some investigating of my own
-    - [ ] Add those resources to README
-    - [ ] Write out new insights I've gained from other resources
+  - [X] Do some investigating of my own
+    - [X] Add those resources to README
+    - [X] Write out new insights I've gained from other resources
   - [ ] Finish the L assignment
     - [ ] Write in that README about how I tackled that assignment
     - [ ] Comment code / explain what I did
@@ -283,13 +283,28 @@ The difficult code should be hidden behind a method or function, with a name sim
 
 ![alt-text](images/patrick-spongebob.gif)
 
+## LSP - Liskov Substitution Principle
+This principle can once again be summarized in one sentence: "Objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program."
+Now to explain this with an example.
+
+Say we have a parent class called 'HomerSimpson' and it has a child class called 'BartSimpson'.
+Then we have a method that expects a HomerSimpson object as it's input.
+According to the LSP, we should be able to swap that HomerSimpson object for a BartSimpson object, without the code breaking or doing something weird.
+
+And in order to adhere to the LSP, the parent class needs to have properties that are relevant to the child class.
+If the parent has a property the child won't use, well, then you done messed up A-ARON!!
+
+I've also made a meme that might explain the LSP to people who can only soak up knowledge through memes (people like myself).
+
+![liskov-meme](images/liskov.png)
+
 ---
 
 ## Sources
 * Regarding OOP:
   * [This freecodecamp link](https://www.freecodecamp.org/news/four-pillars-of-object-oriented-programming/)
 * Rgarding SOLID:
-  * [SRP](https://www.freecodecamp.org/news/solid-principles-single-responsibility-principle-explained/)
-  * [OCP](https://www.freecodecamp.org/news/solid-principles-explained-in-plain-english/)
+  * [Entirety of SOLID, with a focus on SRP](https://www.freecodecamp.org/news/solid-principles-single-responsibility-principle-explained/)
+  * [Entirety of SOLID](https://www.freecodecamp.org/news/solid-principles-explained-in-plain-english/)
 
 ![freecodecamp](images/freecodecamp-meme.png)
