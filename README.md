@@ -78,28 +78,28 @@ And if my silly little words can help others, then that's something I can most d
     - [x] Write in that README about how I tackled that assignment
     - [x] Comment code / explain what I did
 - [ ] 'I' can't believe you've done this
-  - [ ] Read all information given to us by the coaches regarding the S of SOLID.
-  - [ ] Add S of SOLID part in README
-    - [ ] Write everything I've learned from the sources given to us by BeCode about the S
+  - [x] Read all information given to us by the coaches regarding the S of SOLID.
+  - [x] Add S of SOLID part in README
+    - [x] Write everything I've learned from the sources given to us by BeCode about the S
     - Try to use my own words, describe it as simple as possible, and don't be afraid to make mistakes in my own explanation.
-  - [ ] Do some investigating of my own
-    - [ ] Add those resources to README
-    - [ ] Write out new insights I've gained from other resources
+  - [x] Do some investigating of my own
+    - [x] Add those resources to README
+    - [x] Write out new insights I've gained from other resources
   - [ ] Finish the I assignment
     - [ ] Write in that README about how I tackled that assignment
     - [ ] Comment code / explain what I did
 - [ ] 'D'amn that boy can code!
-  - [ ] Read all information given to us by the coaches regarding the D of SOLID.
-  - [ ] Add D of SOLID part in README
-    - [ ] Write everything I've learned from the sources given to us by BeCode about the D
+  - [x] Read all information given to us by the coaches regarding the D of SOLID.
+  - [x] Add D of SOLID part in README
+    - [x] Write everything I've learned from the sources given to us by BeCode about the D
     - Try to use my own words, describe it as simple as possible, and don't be afraid to make mistakes in my own explanation.
-  - [ ] Do some investigating of my own
-    - [ ] Add those resources to README
-    - [ ] Write out new insights I've gained from other resources
+  - [x] Do some investigating of my own
+    - [x] Add those resources to README
+    - [x] Write out new insights I've gained from other resources
   - [ ] Finish the D assignment
     - [ ] Write in that README about how I tackled that assignment
     - [ ] Comment code / explain what I did
-
+-[x] Add an ending
 ---
 
 ## Four Pillars of OOP
@@ -434,6 +434,23 @@ This way modules can be re-used, changes won't destroy the entire darn project, 
 ### Interfacing the code head-on
 The shared abstractions that were mentioned are **interfaces**.
 The most important part of the DIP is to remember: **Do not use a top-down dependency model, use interfaces (abstractions) to create connections between the classes.**
+
+## A rock-SOLID ending
+If I were to describe this assignment in one word, then I wouldn't pick a word, but I'd pick a meme.
+
+![advanced-meme](images/advanced-becode.png)
+
+I'll be completely honest and admit that I struggled quite a bit with this assignment.
+It was quite different from the other assignments we've been doing until now.
+This one focused heavily on theory, I really had to read through some articles and fundamentally understand the SOLID principles.
+
+As much as I struggled with this assignment, I have to admit this was both necessary and made me a better developer.
+SOLID and OOP are such important theories to know and to apply to your code.
+I myself love some good ol' structure, that's why I add TO-DO lists atop of TO-DO lists.
+So implementing that theory will be something I'll definitely pay a lot of attention to.
+
+All in all, great assignment that will be a huge advantage to me when I'm on the jobhunt.
+It's not often we see some heavy theory like this, but when we do, we do it thoroughly!
 
 ---
 
