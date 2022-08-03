@@ -400,6 +400,41 @@ The LSP taught me that a parent class only needs the properties that all of it's
 This logic also applies to the interface.
 Only in this case, an interface needs to have methods that only apply to the class it will be implemented by.
 
+## DIP - Dependency Invasion Principle
+If there's one thing that's important for the SOLID principles, it's interfaces.
+Interfaces are to the SOLID principles what memes are to my READMES.
+
+The Dependency Invasion Principle is about structure.
+Creating a structure that's not rigid, fragile or immobile.
+
+* Rigid : Hard to change due to the effects that change might bring to the code.
+* Fragile: Changes = code goes broke-y.
+* Immobile: You cannot re-use entities because they're too entangled with one another.
+
+DIP is all about writing code that you can re-use wherever, is easy to maintain and is *flexible*.
+That's all good and well, but how the heck do I get started on that?!
+
+### Traditional Dependency Structure V.S Inverted Dependency Structure
+Before we start thinking on how to write code that's DIP-approved, I'll have to explain Dependency Structures.
+It basically means the structure, the layout, that rules that code follows in the way it depends on one another.
+I think giving an example might be the best way to explain it.
+
+The traditional model is a top-down model.
+High-level entities depend on low-level entities, and they depend on even lower level entities.
+And this keeps on keeping on.
+The problem here is that, changes made at the bottom of the code-food-chain, forces changes to higher-level entities.
+This can mess up the code quite a lot.
+
+That's where the Inverted Dependency Structure comes in.
+Both high-level and low-level abstractions depend on shared abstractions, or in this case, interfaces!
+This way modules can be re-used, changes won't destroy the entire darn project, and it's easier to maintain!
+
+![structure-meme](images/dependency-structure.png)
+
+### Interfacing the code head-on
+The shared abstractions that were mentioned are **interfaces**.
+The most important part of the DIP is to remember: **Do not use a top-down dependency model, use interfaces (abstractions) to create connections between the classes.**
+
 ---
 
 ## Sources
