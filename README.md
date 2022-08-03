@@ -1,5 +1,5 @@
 # SOLID Typescript: The Reckoning
-This is assignment is all about learning.
+This assignment is all about learning.
 Which means, I will not care in the **slightest** about the speed of my progress or the result of my project.
 My sole focus will be understanding what I'm doing, aspiring to understand the SOLID principles as good as possible, and to soak my brain in the knowledge-juices of articles explaining SOLID.
 
@@ -117,7 +117,7 @@ So if you'd tell me to memorize and understand all the code of a project, includ
 
 That's where abstraction comes in.
 This principle is all about hiding away the ugly parts of your code in a neat function that's named after what the code does.
-Not exactly and as detailed as possible, but in just one broad term.
+You don't name it as detailed as possible, but in just one broad term, so everyone knows what the function roughly does.
 If you ever *want* to understand how the code works, you can just check it out yourself.
 
 The source I used to understand abstraction better gave me an example of how code would work with and without abstraction.
