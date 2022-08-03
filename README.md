@@ -7,6 +7,12 @@ This README will be the main README.
 I will write down my learning experience down here.
 Every folder you can see in the repository, is for a separate principle of SOLID.
 So in every folder you can find their own README, where I explain what I changed about the code, and why I made those changes.
+But all the information about SOLID, the theory, and the explanations, are all written down in this README.
+
+Without noticing it myself, I added a lot more memes to this README than I normally do.
+So I hope you like memes, because you'll get plenty of 'em!
+
+![read-meme](images/read-meme.png)
 
 ## Installing Typescript and Parcel
 For the first time ever, I can give a shout-out to Past-Besart!
@@ -330,12 +336,76 @@ What's similar is that one interface shouldn't have methods that all classes can
 To fix this is where the ISP comes in!
 Interfaces need to only have the relevant methods.
 
+###  Giving an Ample Example
+I'll start out by writing some code and afterwards explaining it.
+````
+interface Bird {
+    hasBeak ();
+    hasFeathers();
+    canFly ();
+    flyingSpeed();
+}
+
+class Mockingbird implements Bird {
+    hasBeak() {
+    }
+    hasFeathers() {
+    }
+    canFly() {
+    }
+    flyingSpeed() {
+    }
+}
+
+class Penguin implements Bird {
+    hasBeak() {
+    }
+    hasFeathers() {
+    }
+}
+````
+This is an example of code that's not following the ISP.
+The interface 'Bird' has methods that shouldn't apply to the Penguin class.
+So, we separate the Bird interface into two, more specific interfaces.
+````
+interface Bird {
+    hasBeak ();
+    hasFeathers();
+}
+interface Fly {
+    canFly ();
+    flyingSpeed();
+}
+
+class Mockingbird implements Bird, Fly {
+    hasBeak() {
+    }
+    hasFeathers() {
+    }
+    canFly() {
+    }
+    flyingSpeed() {
+    }
+}
+
+class Penguin implements Bird {
+    hasBeak() {
+    }
+    hasFeathers() {
+    }
+}
+````
+Now that's more like it!
+The LSP taught me that a parent class only needs the properties that all of it's children classes will need to inherit.
+This logic also applies to the interface.
+Only in this case, an interface needs to have methods that only apply to the class it will be implemented by.
+
 ---
 
 ## Sources
 * Regarding OOP:
   * [This freecodecamp link](https://www.freecodecamp.org/news/four-pillars-of-object-oriented-programming/)
-* Rgarding SOLID:
+* Regarding SOLID:
   * [Entirety of SOLID, with a focus on SRP](https://www.freecodecamp.org/news/solid-principles-single-responsibility-principle-explained/)
   * [Entirety of SOLID](https://www.freecodecamp.org/news/solid-principles-explained-in-plain-english/)
   * [Interfaces](https://www.w3schools.com/php/php_oop_interfaces.asp)
